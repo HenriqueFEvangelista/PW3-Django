@@ -8,6 +8,32 @@
     </style>
 </head>
 <body>
-    <h1>Hello world!</h1>
+    <div class="container">
+
+        <h1>Hello world!</h1>
+    
+        <h1>Olá {{ nome }}</h1>
+        <p>Idade: {{ idade }}</p>
+    
+        <h2>Lista</h2>
+    
+        <ul>
+            {% for fruta in frutas %}
+                <li>{{ fruta }}</li>
+            {% endfor %}
+        </ul>
+
+        <h1>Home</h1>
+
+            <a href="{% url 'dashboard' %}">
+                <button>Ir para Dashboard</button>
+            </a>
+
+            <a href="{% url 'landingpage' %}">
+                <button>Ir para Landing</button>
+            </a>
+    
+    </div>
+
 </body>
 </html>
