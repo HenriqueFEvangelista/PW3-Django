@@ -1,11 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-from meninoDjango.views import home, dashboard, landingpage
+from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-
-    path('', home, name='home'),
-    path('dashboard/', dashboard, name='dashboard'),
-    path('landing/', landingpage, name='landingpage'),
+    path("admin/", admin.site.urls),
+    path("", include("meninoDjango.urls")),
 ]
