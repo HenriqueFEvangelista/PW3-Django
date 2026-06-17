@@ -40,7 +40,7 @@ def vote(request, question_id):
     except (KeyError, Choice.DoesNotExist):
         return render(
             request,
-            "meninoDjango/dashboard.html",
+            "dashboard.html",
             {
                 "question": question,
                 "error_message": "Você não selecionou uma opção.",
